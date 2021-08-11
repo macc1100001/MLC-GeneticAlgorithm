@@ -2,19 +2,20 @@
 A C implementation of a genetic algorithm to solve the N-Queens problem, using some functions of the GNU Scientific Library.
 ## Dependencies
 * libgsl-dev
+* libplot-dev
 
 ## Compilation
 
 ```bash
-sudo apt install libgsl-dev
+sudo apt install libgsl-dev libplot-dev
 make
 ```
 
 ## Examples
-To run the program for 8 queens, a population size of 10, a maximum generations of 50, a mutation probability of 0.2, a crossing probability of 0.8 and roulette selection, do:
+To run the program for 8 queens, a population size of 10, a maximum generations of 50, a mutation probability of 0.2, a crossing probability of 0.8, roulette selection and print solution to file **solution.png**, do:
 
 ```bash
-./genalg
+./genalg -i
 ```
 **output**:
 
@@ -31,6 +32,7 @@ Solution: [ 3, 6, 8, 2, 4, 1, 7, 5 ]
 [ ][ ][ ][ ][ ][ ][Q][ ]
 [ ][ ][ ][ ][Q][ ][ ][ ]
 ```
+![solution1](/imgs/solution.png)
 
 
 Run the algorithm with 8 queens, a population size of 20, a maximum generations of 150, a mutation probability of 0.3, a crossing probability of 0.7, roulette selection and show verbose output, do:
@@ -130,10 +132,10 @@ To show help and usage, do:
 ```
 
 # ToDo:
-- [ ] Modify the **ga_solution** struct to save all posible solutions found for N-Queens(this implies modifying **ga** function to not end on the first solution found, but find all of them without saving repeated solutions.).
-- [ ] Modify **CrossOver** function to work with N-Queens.(current implementation only works with 8-Queens).
-- [ ] Implement more selection algorithms.
-- [ ] Save an image of the solution representation. A chessboard(NxN) with the queens in their places. And maybe also save an image of every individual from each generation. Like in: https://en.wikipedia.org/wiki/Eight_queens_puzzle
+- [  ] Modify the **ga_solution** struct to save all posible solutions found for N-Queens(this implies modifying **ga_solver** function to not end on the first solution found, but find all of them without saving repeated solutions.).
+- [  ] Modify **crossover** function to work with N-Queens.(current implementation only works with 8-Queens). Also modify the **draw_solution** function to draw N-Queens in an image.
+- [  ] Implement more selection algorithms.
+- [ x ] Save an image of the solution representation. A chessboard(NxN) with the queens in their places. And maybe also save an image of every individual from each generation. Like in: https://en.wikipedia.org/wiki/Eight_queens_puzzle
 
 ![Example 1](/imgs/example1.png)
 
