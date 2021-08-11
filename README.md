@@ -132,9 +132,9 @@ To show help and usage, do:
 ```
 
 # ToDo:
-- [  ] Modify the **ga_solution** struct to save all posible solutions found for N-Queens(this implies modifying **ga_solver** function to not end on the first solution found, but find all of them without saving repeated solutions.).
-- [  ] Modify **crossover** function to work with N-Queens.(current implementation only works with 8-Queens). Also modify the **draw_solution** function to draw N-Queens in an image.
-- [  ] Implement more selection algorithms.
+- [ ] Modify the **ga_solution** struct to save all posible solutions found for N-Queens(this implies modifying **ga_solver** function to not end on the first solution found, but find all of them without saving repeated solutions.).
+- [ ] Modify **crossover** function to work with N-Queens.(current implementation only works with 8-Queens). Also modify the **draw_solution** function to draw N-Queens in an image.
+- [ ] Implement more selection algorithms.
 - [x] Save an image of the solution representation. A chessboard(NxN) with the queens in their places. And maybe also save an image of every individual from each generation. Like in: https://en.wikipedia.org/wiki/Eight_queens_puzzle
 
 ![Example 1](/imgs/example1.png)
