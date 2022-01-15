@@ -4,7 +4,7 @@ A C implementation of a genetic algorithm to solve the N-Queens problem, using s
 * libgsl-dev
 * libplot-dev
 
-## Compilation
+## Build
 
 ```bash
 sudo apt install libgsl-dev libplot-dev

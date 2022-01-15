@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -g -Wall -Wextra -I$(HDRDIR)
+CFLAGS = -O3 -Wall -Wextra -I$(HDRDIR)
 LDFLAGS = -lgsl -lgslcblas -lm -lplot -lpng
 EXEC = genalg
 SRCDIR = sources
@@ -8,7 +8,7 @@ OBJDIR = obj
 OBJ_NAMES = main.o genalg.o
 OBJS = $(addprefix $(OBJDIR)/,$(OBJ_NAMES))
 
-all: mkndirs $(EXEC)
+all: $(EXEC)
 
 $(EXEC): $(OBJS)
 	$(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS)
